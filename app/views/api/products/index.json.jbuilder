@@ -9,3 +9,4 @@ json.updated_at product.updated_at
 # json.partial! "product.json.jbuilder", product: product
 # json.user_info current_user
 # json.message "hello"
+end
