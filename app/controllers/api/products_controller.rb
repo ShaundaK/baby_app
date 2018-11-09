@@ -13,12 +13,25 @@ class Api::ProductsController < ApplicationController
 
   def create
     @product = Product.new(
-      name: params[:input_name],
-      description: params[:input_description],
-      age: params[:input_age],
-      gender: params[:input_gender]
+      name: params[:name],
+      description: params[:description],
+      age: params[:age],
+      gender: params[:gender]
       )
      @product.save
      render "show.json.jbuilder"
   end
-end
+
+  def update
+    @product = Product.find(params[:id])
+    @product.update(
+    name: params[:input_name],
+    description: params[:input_description],
+    age: params[:input_age],
+    gender: params[:input_gender]
+    )
+    @product.save
+    render "show.json.jbuilder"
+    end
+  end
+  
