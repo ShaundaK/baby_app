@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     delete "/products/:id" => "products#destroy"
 
     get "/users" => "users#index"
+    get "/users/:id" => "users#show"
   end
 end
