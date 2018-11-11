@@ -9,10 +9,12 @@ Rails.application.routes.draw do
     delete "/products/:id" => "products#destroy"
 
     get "/categories" => "categories#index"
+    get "/categories/:id" => "categories#show"
 
     # get "/users" => "users#index"
     # get "/users/:id" => "users#show"
     post "/users" => "users#create"
+
 
   end
 end
