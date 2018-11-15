@@ -16,7 +16,8 @@ class Api::ProductsController < ApplicationController
       name: params[:name],
       description: params[:description],
       age: params[:age],
-      gender: params[:gender]
+      gender: params[:gender],
+      image_url: params[:image_url]
       )
      @product.save
      render "show.json.jbuilder"
@@ -28,7 +29,8 @@ class Api::ProductsController < ApplicationController
     name: params[:input_name],
     description: params[:input_description],
     age: params[:input_age],
-    gender: params[:input_gender]
+    gender: params[:input_gender],
+    image_url: params[:input_image_url]
     )
     @product.save
     render "show.json.jbuilder"
