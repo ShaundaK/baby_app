@@ -1,0 +1,5 @@
+class RemoveExpectingFromUsers < ActiveRecord::Migration[5.2]
+  def change
+    remove_column :users, :expecting?, :string
+  end
+end
