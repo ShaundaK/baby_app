@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     get "/categories/:id" => "categories#show"
     
     post "/users" => "users#create"
-
     post "/sessions" => "sessions#create"
 
 
