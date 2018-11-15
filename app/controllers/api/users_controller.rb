@@ -3,7 +3,7 @@ def create
   user = User.new(
     first_name: params[:first_name],
     last_name: params[:last_name],
-    username: params[:username,
+    username: params[:username],
     password: params[:password],
     email: params[:email],
     phone_number: params[:phone_number],
@@ -19,5 +19,4 @@ def create
       render json: {errors: user.errors.full_messages}, status: :bad_request
     end
   end
-
 end
