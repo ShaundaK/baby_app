@@ -1,6 +1,5 @@
 json.array! @products do |product|
 json.id product.id
-json.image_url product.image_url
 json.name product.name
 json.description product.description
 json.age product.age
