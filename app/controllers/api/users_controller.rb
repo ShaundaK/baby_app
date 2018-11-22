@@ -8,7 +8,6 @@ def create
     email: params[:email],
     phone_number: params[:phone_number],
     summary: params[:summary],
-    age_of_child: params[:age_of_child],
     gender_of_child: params[:gender_of_child],
     zipcode: params[:zipcode]
     )

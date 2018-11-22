@@ -20,7 +20,7 @@ class Api::ProductsController < ApplicationController
       gender: params[:gender],
       image_url: params[:image_url]
       )
-     @product.save
+     @product.save!
      render "show.json.jbuilder"
   end
 
@@ -33,9 +33,12 @@ class Api::ProductsController < ApplicationController
     gender: params[:input_gender],
     image_url: params[:input_image_url]
     )
-    @product.save
-    render "show.json.jbuilder"
+    if @product.save
+      render "show.json.jbuilder"
+    else 
+      render "error.json.jbuilder"
     end
+  end
 
   def destroy
     @product = Product.find(params[:id])
