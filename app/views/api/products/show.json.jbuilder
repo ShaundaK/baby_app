@@ -1,5 +1,4 @@
 json.id @product.id
-
 json.name @product.name
 json.description @product.description
 json.age @product.age

@@ -19,8 +19,8 @@ class Api::ProductsController < ApplicationController
       age: params[:age],
       gender: params[:gender]
       )
-     @product.save!
-     render "show.json.jbuilder"
+    @product.save!
+    render "show.json.jbuilder"
   end
 
   def update
