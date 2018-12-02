@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get "/categories" => "categories#index"
     get "/categories/:id" => "categories#show"
     
+    get "/users" => "users#index"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
 
