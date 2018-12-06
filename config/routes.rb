@@ -8,10 +8,12 @@ Rails.application.routes.draw do
     patch "/products/:id" => "products#update"
     delete "/products/:id" => "products#destroy"
 
+
     get "/categories" => "categories#index"
     get "/categories/:id" => "categories#show"
     
     get "/users" => "users#index"
+    get "/users/:id" => "users#show"
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
 
