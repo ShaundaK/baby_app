@@ -33,22 +33,20 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
-    @user.update(
-      first_name: params[:input_first_name],
-      last_name: params[:input_last_name],
-      username: params[:input_username],
-      email: params[:input_email],
-      phone_number: params[:input_phone_number],
-      summary: params[:input_summary],
-      zipcode: params[:input_zipcode]
-      )
-    if @user.save
-      render "show.json.jbuilder"
-    else 
+    user_id = params[:id]
+    @user = User.find_by(id: user_id)
+    # change that user ==> kind of like create
+    @user.username = params[:input_username] || @user.username
+    @user.phone_number = params[:input_phone_number] || @user.phone_number
+    @user.summary = params[:input_summary] || @user.summary
+    @user.zipcode = params[:input_zipcode] || @user.zipcode
+    @user.save
+    # if @user.save
+    #   render "show.json.jbuilder"
+    # else 
       render "error.json.jbuilder"
     end
   end
-end
+
 
 
