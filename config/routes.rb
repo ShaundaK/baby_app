@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     patch "/users/:id" => "users#update"
 
     post "/sessions" => "sessions#create"
+
+    get "/events" => "events#index"
     
 
   end 
