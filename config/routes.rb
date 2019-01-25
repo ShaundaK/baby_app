@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # STEP 1: A ROUTE triggers a controller action
   # verb "/urls" => "namespace/controllers#action"
+
+  root "categories#index"
+  
   namespace :api do
 
     get "/products" => "products#index"
@@ -21,7 +24,7 @@ Rails.application.routes.draw do
     post "/sessions" => "sessions#create"
 
     get "/events" => "events#index"
-    
+
   end 
 end
 
