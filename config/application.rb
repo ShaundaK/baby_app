@@ -21,7 +21,6 @@ module BabyApp
   class Application < Rails::Application
     config.generators.assets = false
         config.generators.helper = false
-        config.assets.initialize_on_precompile = false
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
